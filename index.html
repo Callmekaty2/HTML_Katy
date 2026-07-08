@@ -139,14 +139,25 @@ Servizi alla persona e supporto quotidiano
 <div class="servizi">
 
 
-<div class="card">
-<h3>🐶 Dog-Sitter</h3>
-<p>
-Cura e compagnia per i tuoi amici a quattro zampe.
-</p>
-<a class="pulsante" href="dog-sitter.html">
-Scopri
-</a>
+<div id="popup" class="popup">
+
+    <div class="popup-contenuto">
+
+        <span class="chiudi" onclick="chiudiPopup()">
+            &times;
+        </span>
+
+        <h2>🐶 Dog-Sitter</h2>
+
+        <img src="dog.jpg" alt="Locandina Dog Sitter">
+
+        <p>
+            Servizio di cura, passeggiate e compagnia
+            per i tuoi amici a quattro zampe.
+        </p>
+
+    </div>
+
 </div>
 
 
@@ -198,32 +209,6 @@ Scopri
 
 <script>
 
-function mostraLocandina(servizio) {
-
-    let area = document.getElementById("locandina");
-
-    if (servizio == "dog") {
-
-        area.innerHTML =
-        '<img src="dog.jpg" alt="Locandina Dog Sitter">';
-
-    }
-
-    else if (servizio == "baby") {
-
-        area.innerHTML =
-        '<img src="baby.jpg" alt="Locandina Baby Sitter">';
-
-    }
-
-    else if (servizio == "traslochi") {
-
-        area.innerHTML =
-        '<img src="car.jpg" alt="Locandina Sgomberi e Traslochi">';
-
-    }
-
-}
 
 </script>
 
