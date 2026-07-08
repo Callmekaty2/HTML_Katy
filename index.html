@@ -6,253 +6,446 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KATY Servizi</title>
+<title>KATY Servizi 🌸</title>
+
 
 <style>
 
+
+*{
+    box-sizing:border-box;
+}
+
+
 body {
-    background-color: #FFF0F5;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    color: #6B4A57;
-    margin: 0;
+
+    background:linear-gradient(135deg,#fff0f5,#ffe1ec);
+
+    font-family:'Segoe UI',Arial,sans-serif;
+
+    text-align:center;
+
+    color:#6B4A57;
+
+    margin:0;
+
 }
 
 
-/* Titolo */
 
-h1 {
-    color: #E8A0BF;
-    font-size: 45px;
-    margin-top:40px;
+/* HEADER */
+
+
+header{
+
+    padding:40px 20px;
+
 }
 
-h2 {
-    color:#D888AB;
+
+h1{
+
+    color:#d86f9b;
+
+    font-size:48px;
+
+    margin:0;
+
 }
 
 
-/* Presentazione */
+.presentazione{
 
-.presentazione {
     font-size:20px;
-    margin-bottom:30px;
+
+    line-height:1.6;
+
 }
 
 
-/* Immagine principale */
 
-img {
-    width:250px;
+.logo{
+
+    width:230px;
+
     border-radius:50%;
-    box-shadow:0 5px 15px #e8a0bf;
+
+    box-shadow:0 10px 30px #e8a0bf;
+
+    margin-top:20px;
+
 }
 
 
-/* Servizi */
 
-.servizi {
+/* TITOLI */
+
+
+h2{
+
+    color:#c85d8a;
+
+    margin-top:40px;
+
+}
+
+
+
+
+/* SERVIZI */
+
+
+.servizi{
 
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
-    gap:25px;
-    margin:40px;
+
+    gap:30px;
+
+    padding:40px;
 
 }
 
 
-/* Schede tutte uguali */
 
-.card {
+.card{
+
 
     background:white;
-    width:220px;
-    min-height:260px;
-    padding:25px;
-    border-radius:25px;
-    box-shadow:0 8px 20px rgba(232,160,191,0.3);
+
+
+    width:250px;
+
+
+    min-height:300px;
+
+
+    padding:30px 25px;
+
+
+    border-radius:30px;
+
+
+    box-shadow:
+    0 10px 25px rgba(216,111,155,0.25);
+
 
     display:flex;
+
+
     flex-direction:column;
+
+
     justify-content:space-between;
 
-    transition:0.3s;
+
+    transition:.4s;
+
 
 }
 
 
-.card:hover {
 
-    transform:translateY(-10px);
+.card:hover{
+
+
+    transform:translateY(-12px);
+
+
+    box-shadow:
+    0 15px 35px rgba(216,111,155,0.4);
+
 
 }
 
 
-.card h3 {
 
-    color:#E8A0BF;
+
+.card h3{
+
+
+    color:#d86f9b;
+
+    font-size:22px;
 
 }
 
 
-/* Pulsante */
 
-.pulsante {
+
+
+/* PULSANTE */
+
+
+.pulsante{
+
+
+    background:#e89ab8;
+
 
     border:none;
-    cursor:pointer;
 
-    padding:10px 25px;
-
-    background:#F4A6C1;
 
     color:white;
 
-    border-radius:20px;
+
+    padding:12px 30px;
+
+
+    border-radius:30px;
+
+
+    cursor:pointer;
+
 
     font-size:16px;
 
+
+    transition:.3s;
+
+
 }
 
 
-.pulsante:hover {
 
-    background:#D888AB;
+.pulsante:hover{
+
+
+    background:#c85d8a;
+
+
+    transform:scale(1.05);
+
 
 }
 
 
 
-/* Popup */
 
-.popup {
+/* POPUP */
+
+
+.popup{
+
 
     display:none;
 
+
     position:fixed;
 
-    z-index:1000;
 
-    left:0;
+    z-index:999;
+
+
     top:0;
 
+
+    left:0;
+
+
     width:100%;
+
+
     height:100%;
 
-    background:rgba(0,0,0,0.7);
+
+    background:rgba(80,20,50,.75);
+
+
+    animation:fade .3s;
+
 
 }
 
 
 
-/* Contenuto popup */
+@keyframes fade{
 
-.popup-contenuto {
+
+from{
+opacity:0;
+}
+
+
+to{
+opacity:1;
+}
+
+
+}
+
+
+
+.popup-contenuto{
+
 
     position:relative;
 
-    margin:5% auto;
 
     width:90%;
 
+
     max-width:550px;
+
+
+    margin:5% auto;
+
 
 }
 
 
-/* Locandina */
 
-.popup-contenuto img {
+.popup-contenuto img{
+
 
     width:100%;
 
-    border-radius:20px;
-
-    box-shadow:0 10px 30px black;
-
-}
-
-
-
-/* X chiusura */
-
-.chiudi {
-
-    position:absolute;
-
-    right:0;
-
-    top:-45px;
-
-    color:white;
-
-    font-size:45px;
-
-    cursor:pointer;
-
-}
-
-
-
-/* Contatti */
-
-.contatti {
-
-    background:white;
-
-    margin:40px auto;
-
-    padding:25px;
-
-    width:70%;
 
     border-radius:25px;
 
-}
 
+    box-shadow:0 15px 40px black;
 
-
-a {
-
-    color:#C76C93;
-
-    text-decoration:none;
 
 }
 
 
 
-/* Footer */
+.chiudi{
 
-footer {
 
-    background:#F4A6C1;
+    position:absolute;
+
+
+    right:5px;
+
+
+    top:-45px;
+
+
+    font-size:45px;
+
 
     color:white;
 
-    padding:20px;
+
+    cursor:pointer;
+
 
 }
 
 
 
-/* Versione smartphone */
+
+
+/* CONTATTI */
+
+
+.contatti{
+
+
+    background:white;
+
+
+    width:80%;
+
+
+    max-width:700px;
+
+
+    margin:40px auto;
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    box-shadow:0 10px 25px rgba(216,111,155,.25);
+
+
+}
+
+
+
+a{
+
+
+    color:#c85d8a;
+
+
+    text-decoration:none;
+
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+
+    background:#e89ab8;
+
+
+    color:white;
+
+
+    padding:25px;
+
+
+    margin-top:50px;
+
+
+}
+
+
+
+
+/* SMARTPHONE */
+
 
 @media(max-width:600px){
 
-    h1{
-        font-size:35px;
-    }
 
+h1{
 
-    .contatti{
-
-        width:85%;
-
-    }
+font-size:35px;
 
 }
+
+
+.servizi{
+
+padding:20px;
+
+}
+
+
+.card{
+
+width:90%;
+
+}
+
+
+.contatti{
+
+width:90%;
+
+}
+
+
+}
+
+
 
 </style>
 
@@ -262,6 +455,10 @@ footer {
 
 
 <body>
+
+
+
+<header>
 
 
 <h1>🌸 Katy Servizi 🌸</h1>
@@ -276,8 +473,11 @@ Servizi alla persona e supporto quotidiano
 </p>
 
 
+<img class="logo" src="fiore.jpg" alt="Logo Katy Servizi">
 
-<img src="fiore.jpg" alt="Fiori rosa">
+
+</header>
+
 
 
 
@@ -285,13 +485,12 @@ Servizi alla persona e supporto quotidiano
 
 
 
+
 <div class="servizi">
 
 
 
-<div class="card"> 
-
-</div>
+<div class="card">
 
 <h3>🐶 Dog-Sitter</h3>
 
@@ -299,13 +498,15 @@ Servizi alla persona e supporto quotidiano
 Cura e compagnia per i tuoi amici a quattro zampe.
 </p>
 
-<button class="pulsante" onclick="apriPopup()">
+<button class="pulsante" onclick="apriPopup('dog.jpg')">
 Scopri
 </button>
 
 </div>
 
-   
+
+
+
 <div class="card">
 
 <h3>👶 Baby-Sitter</h3>
@@ -314,11 +515,12 @@ Scopri
 Assistenza ai bambini con attenzione e affidabilità.
 </p>
 
-<button class="pulsante" onclick="apriPopup()">
+<button class="pulsante" onclick="apriPopup('baby.jpg')">
 Scopri
 </button>
 
 </div>
+
 
 
 
@@ -331,11 +533,12 @@ Scopri
 Supporto per pratiche, documenti e servizi fiscali.
 </p>
 
-<button class="pulsante" onclick="apriPopup()">
+<button class="pulsante" onclick="apriPopup('caf.jpg')">
 Scopri
 </button>
 
 </div>
+
 
 
 
@@ -348,11 +551,12 @@ Scopri
 Aiuto nella scelta di prodotti e acquisti.
 </p>
 
-<button class="pulsante" onclick="apriPopup()">
+<button class="pulsante" onclick="apriPopup('shopper.jpg')">
 Scopri
 </button>
 
 </div>
+
 
 
 
@@ -365,7 +569,7 @@ Scopri
 Aiuto nell'organizzazione di spostamenti e sgomberi.
 </p>
 
-<button class="pulsante" onclick="apriPopup()">
+<button class="pulsante" onclick="apriPopup('traslochi.jpg')">
 Scopri
 </button>
 
@@ -382,48 +586,32 @@ Scopri
 <div class="contatti">
 
 
-<h2>Contatti</h2>
+<h2>📞 Contatti</h2>
 
 
 <p>
-
-📧 Email:
-
+📧 
 <a href="mailto:katiamarino2003@gmail.com">
-
 katiamarino2003@gmail.com
-
 </a>
-
 </p>
 
 
-
 <p>
-
-📞 Telefono:
-
+📞
 <a href="tel:+390000000000">
-
 +39 000 000 0000
-
 </a>
-
 </p>
-
 
 
 <p>
-
 📷 Instagram:
-
 <a href="#">
-
 @katy.servizi.ct
-
 </a>
-
 </p>
+
 
 
 </div>
@@ -442,7 +630,7 @@ katiamarino2003@gmail.com
 
 
 
-<!-- POPUP LOCANDINA -->
+<!-- POPUP RIUTILIZZABILE -->
 
 
 <div id="popup" class="popup">
@@ -458,9 +646,7 @@ katiamarino2003@gmail.com
 </span>
 
 
-
-<img src="locandina.jpg" alt="Locandina Katy Servizi">
-
+<img id="immaginePopup" src="">
 
 
 </div>
@@ -475,9 +661,14 @@ katiamarino2003@gmail.com
 <script>
 
 
-function apriPopup(){
+function apriPopup(immagine){
+
+
+document.getElementById("immaginePopup").src=immagine;
+
 
 document.getElementById("popup").style.display="block";
+
 
 }
 
@@ -485,13 +676,16 @@ document.getElementById("popup").style.display="block";
 
 function chiudiPopup(){
 
+
 document.getElementById("popup").style.display="none";
+
 
 }
 
 
 
 window.onclick=function(event){
+
 
 let popup=document.getElementById("popup");
 
@@ -512,7 +706,5 @@ popup.style.display="none";
 
 
 </body>
-
-</html>
 
 </html>
