@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -17,106 +18,247 @@ body {
     margin: 0;
 }
 
-/* Titolo principale */
+
+/* Titolo */
+
 h1 {
     color: #E8A0BF;
     font-size: 45px;
-    margin-top: 40px;
+    margin-top:40px;
 }
 
 h2 {
-    color: #D888AB;
+    color:#D888AB;
 }
 
-/* Descrizione */
+
+/* Presentazione */
+
 .presentazione {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size:20px;
+    margin-bottom:30px;
 }
 
-/* Immagine */
+
+/* Immagine principale */
+
 img {
-    width: 250px;
-    border-radius: 50%;
-    box-shadow: 0 5px 15px #e8a0bf;
+    width:250px;
+    border-radius:50%;
+    box-shadow:0 5px 15px #e8a0bf;
 }
 
 
 /* Servizi */
 
 .servizi {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin: 40px;
+
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin:40px;
+
 }
 
 
+/* Schede tutte uguali */
+
 .card {
-    background-color: white;
-    width: 220px;
-    padding: 25px;
-    border-radius: 25px;
-    box-shadow: 0 8px 20px rgba(232,160,191,0.3);
-    transition: 0.3s;
+
+    background:white;
+    width:220px;
+    min-height:260px;
+    padding:25px;
+    border-radius:25px;
+    box-shadow:0 8px 20px rgba(232,160,191,0.3);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    transition:0.3s;
+
 }
 
 
 .card:hover {
-    transform: translateY(-10px);
+
+    transform:translateY(-10px);
+
 }
 
 
 .card h3 {
+
     color:#E8A0BF;
+
 }
 
 
+/* Pulsante */
+
 .pulsante {
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
+
+    border:none;
+    cursor:pointer;
+
+    padding:10px 25px;
+
     background:#F4A6C1;
+
     color:white;
+
     border-radius:20px;
-    text-decoration:none;
+
+    font-size:16px;
+
 }
 
 
 .pulsante:hover {
+
     background:#D888AB;
+
 }
+
+
+
+/* Popup */
+
+.popup {
+
+    display:none;
+
+    position:fixed;
+
+    z-index:1000;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+}
+
+
+
+/* Contenuto popup */
+
+.popup-contenuto {
+
+    position:relative;
+
+    margin:5% auto;
+
+    width:90%;
+
+    max-width:550px;
+
+}
+
+
+/* Locandina */
+
+.popup-contenuto img {
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px black;
+
+}
+
+
+
+/* X chiusura */
+
+.chiudi {
+
+    position:absolute;
+
+    right:0;
+
+    top:-45px;
+
+    color:white;
+
+    font-size:45px;
+
+    cursor:pointer;
+
+}
+
 
 
 /* Contatti */
 
 .contatti {
+
     background:white;
+
     margin:40px auto;
+
     padding:25px;
+
     width:70%;
+
     border-radius:25px;
+
 }
+
 
 
 a {
+
     color:#C76C93;
+
     text-decoration:none;
+
 }
+
 
 
 /* Footer */
 
 footer {
+
     background:#F4A6C1;
+
     color:white;
+
     padding:20px;
+
+}
+
+
+
+/* Versione smartphone */
+
+@media(max-width:600px){
+
+    h1{
+        font-size:35px;
+    }
+
+
+    .contatti{
+
+        width:85%;
+
+    }
+
 }
 
 </style>
 
+
 </head>
+
 
 
 <body>
@@ -124,107 +266,169 @@ footer {
 
 <h1>🌸 Katy Servizi 🌸</h1>
 
+
 <p class="presentazione">
+
 Operatrice Informatica di Risorse Web<br>
+
 Servizi alla persona e supporto quotidiano
+
 </p>
+
 
 
 <img src="fiore.jpg" alt="Fiori rosa">
 
 
+
 <h2>I miei servizi</h2>
+
 
 
 <div class="servizi">
 
 
+
 <div class="card">
+
 <h3>🐶 Dog-Sitter</h3>
+
 <p>
 Cura e compagnia per i tuoi amici a quattro zampe.
 </p>
-<a class="pulsante" href="dog.html">
+
+<button class="pulsante" onclick="apriPopup()">
 Scopri
-</a>
+</button>
+
 </div>
 
+
+
+
 <div class="card">
+
 <h3>👶 Baby-Sitter</h3>
+
 <p>
 Assistenza ai bambini con attenzione e affidabilità.
 </p>
-<a class="pulsante" href="baby-sitter.html">
+
+<button class="pulsante" onclick="apriPopup()">
 Scopri
-</a>
+</button>
+
 </div>
 
 
+
+
 <div class="card">
+
 <h3>📄 Patronato / CAF</h3>
+
 <p>
 Supporto per pratiche, documenti e servizi fiscali.
 </p>
-<a class="pulsante" href="caf.html">
+
+<button class="pulsante" onclick="apriPopup()">
 Scopri
-</a>
+</button>
+
 </div>
 
 
+
+
 <div class="card">
+
 <h3>🛍 Personal Shopper</h3>
+
 <p>
 Aiuto nella scelta di prodotti e acquisti.
 </p>
-<a class="pulsante" href="shopper.html">
+
+<button class="pulsante" onclick="apriPopup()">
 Scopri
-</a>
+</button>
+
 </div>
+
+
 
 
 <div class="card">
+
 <h3>🚚 Sgomberi e Traslochi</h3>
+
 <p>
 Aiuto nell'organizzazione di spostamenti e sgomberi.
 </p>
-<a class="pulsante" href="traslochi.html">
+
+<button class="pulsante" onclick="apriPopup()">
 Scopri
-</a>
+</button>
+
 </div>
 
 
+
 </div>
+
+
 
 
 
 <div class="contatti">
 
+
 <h2>Contatti</h2>
 
+
 <p>
+
 📧 Email:
+
 <a href="mailto:katiamarino2003@gmail.com">
+
 katiamarino2003@gmail.com
+
 </a>
+
 </p>
 
 
+
 <p>
+
 📞 Telefono:
+
 <a href="tel:+390000000000">
+
 +39 000 000 0000
+
 </a>
+
 </p>
+
 
 
 <p>
+
 📷 Instagram:
+
 <a href="#">
+
 @katy.servizi.ct
+
 </a>
+
 </p>
+
 
 </div>
+
+
 
 
 
@@ -233,6 +437,78 @@ katiamarino2003@gmail.com
 © 2026 Katy — Servizi e Risorse Web 🌸
 
 </footer>
+
+
+
+
+
+<!-- POPUP LOCANDINA -->
+
+
+<div id="popup" class="popup">
+
+
+<div class="popup-contenuto">
+
+
+<span class="chiudi" onclick="chiudiPopup()">
+
+&times;
+
+</span>
+
+
+
+<img src="locandina.jpg" alt="Locandina Katy Servizi">
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+function apriPopup(){
+
+document.getElementById("popup").style.display="block";
+
+}
+
+
+
+function chiudiPopup(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+
+
+window.onclick=function(event){
+
+let popup=document.getElementById("popup");
+
+
+if(event.target==popup){
+
+popup.style.display="none";
+
+}
+
+
+}
+
+
+
+</script>
+
 
 
 </body>
