@@ -1,106 +1,241 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KATY</title>  
-     <style>
-        body {
-            background-color: #FFF0F5; /* Rosa molto chiaro */
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
 
-        h1 {
-            color: #F4A6C1;
-        }
-    </style>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KATY Servizi</title>
+
+<style>
+
+body {
+    background-color: #FFF0F5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #6B4A57;
+    margin: 0;
+}
+
+/* Titolo principale */
+h1 {
+    color: #E8A0BF;
+    font-size: 45px;
+    margin-top: 40px;
+}
+
+h2 {
+    color: #D888AB;
+}
+
+/* Descrizione */
+.presentazione {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Immagine */
+img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px #e8a0bf;
+}
+
+
+/* Servizi */
+
+.servizi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 40px;
+}
+
+
+.card {
+    background-color: white;
+    width: 220px;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(232,160,191,0.3);
+    transition: 0.3s;
+}
+
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+
+.card h3 {
+    color:#E8A0BF;
+}
+
+
+.pulsante {
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#F4A6C1;
+    color:white;
+    border-radius:20px;
+    text-decoration:none;
+}
+
+
+.pulsante:hover {
+    background:#D888AB;
+}
+
+
+/* Contatti */
+
+.contatti {
+    background:white;
+    margin:40px auto;
+    padding:25px;
+    width:70%;
+    border-radius:25px;
+}
+
+
+a {
+    color:#C76C93;
+    text-decoration:none;
+}
+
+
+/* Footer */
+
+footer {
+    background:#F4A6C1;
+    color:white;
+    padding:20px;
+}
+
+</style>
+
 </head>
+
+
 <body>
 
-    <h1>Benvenuto!</h1>
-  <style>
-        h1 {
-            color: #FFD6E8; /* Rosa tenue */
-        }
-    </style>
 
-    <p>Operatore Informatico Di Risorse Web.</p>
-     <style>
-    h1 { color: #F4A6C1; /* Rosa pastello */
-        }
-    </style>
-      <img src="fiore.jpg" alt="fiori rosa">
-    <h2>Contatti</h2>
+<h1>🌸 Katy Servizi 🌸</h1>
 
-<p>📧 Email:
-    <a href="katiamarino2003@gmail.com">katiamarino2003@gmail.com</a>
+<p class="presentazione">
+Operatrice Informatica di Risorse Web<br>
+Servizi alla persona e supporto quotidiano
 </p>
 
-<p>📞 Telefono:
-    <a href="tel:+390000000000">+39 000 000 0000</a>
+
+<img src="fiore.jpg" alt="Fiori rosa">
+
+
+<h2>I miei servizi</h2>
+
+
+<div class="servizi">
+
+
+<div class="card">
+<h3>🐶 Dog-Sitter</h3>
+<p>
+Cura e compagnia per i tuoi amici a quattro zampe.
 </p>
-    <p>📷 Instagram:
-    <a href="Katy.servizi.ct" target="nobody">
-        @katy.servizi.ct
-    </a>
+<a class="pulsante" href="dog-sitter.html">
+Scopri
+</a>
+</div>
+
+
+<div class="card">
+<h3>👶 Baby-Sitter</h3>
+<p>
+Assistenza ai bambini con attenzione e affidabilità.
 </p>
-    <footer class="wrap">
-  <div>© 2026 Katy — Operatrice Informatica di Risorse Web</div>
-  <div class="mono">Torna su ↑</div>
-         <style>
-        h1 {
-            color: #FFD6E8; /* Rosa tenue */
-        }
-    </style>
+<a class="pulsante" href="baby-sitter.html">
+Scopri
+</a>
+</div>
+
+
+<div class="card">
+<h3>📄 Patronato / CAF</h3>
+<p>
+Supporto per pratiche, documenti e servizi fiscali.
+</p>
+<a class="pulsante" href="caf.html">
+Scopri
+</a>
+</div>
+
+
+<div class="card">
+<h3>🛍 Personal Shopper</h3>
+<p>
+Aiuto nella scelta di prodotti e acquisti.
+</p>
+<a class="pulsante" href="shopper.html">
+Scopri
+</a>
+</div>
+
+
+<div class="card">
+<h3>🚚 Sgomberi e Traslochi</h3>
+<p>
+Aiuto nell'organizzazione di spostamenti e sgomberi.
+</p>
+<a class="pulsante" href="traslochi.html">
+Scopri
+</a>
+</div>
+
+
+</div>
+
+
+
+<div class="contatti">
+
+<h2>Contatti</h2>
+
+<p>
+📧 Email:
+<a href="mailto:katiamarino2003@gmail.com">
+katiamarino2003@gmail.com
+</a>
+</p>
+
+
+<p>
+📞 Telefono:
+<a href="tel:+390000000000">
++39 000 000 0000
+</a>
+</p>
+
+
+<p>
+📷 Instagram:
+<a href="#">
+@katy.servizi.ct
+</a>
+</p>
+
+</div>
+
+
+
+<footer>
+
+© 2026 Katy — Servizi e Risorse Web 🌸
+
 </footer>
-    <!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <title>Effetto clic</title>
 
-    <style>
-        body {
-            background-color: #fff0f5;
-            text-align: center;
-            font-family: Arial, sans-serif;
-        }
-
-        h2 {
-            color: #e8a0bf;
-            cursor: pointer;
-        }
-
-        #testo {
-            display: none;
-            color: #7c6b85;
-            font-size: 20px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <h2 onclick="mostraTesto()">Clicca qui 🌸</h2>
-   <script>
-        function mostraTesto() {
-            document.getElementById("testo").style.display = "block";
-        }
-    </script>
-      <div class="menu">
-        <a class="pulsante" href="chi-sono.html">Dog-Sitter</a>
-        <a class="pulsante" href="servizi.html">Baby-Sitter</a>
-        <a class="pulsante" href="portfolio.html">Patronato/Caf</a>
-        <a class="pulsante" href="contatti.html">Personal Shopper</a>
-        <a class="pulsante" href="info.html">Sgombri/Traslochi</a>
-    </div>
-
-
- 
 
 </body>
-</html>
-</body>
-  
+
 </html>
